@@ -1,21 +1,23 @@
-import React, {useState} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/Navbar/navbar.js';
+import Home from './components/Home/index.js';
+import NewEvent from './components/NewEvent/index.js';
 import './main.scss';
 
 function App() {
-  var [count,setCount] = useState(0);
 
-  function getCount() {
-    setCount(count + 1)
-  }
-  function decreaseCount() {
-    setCount(count - 1)
-  }
   return (
-    <div className="App">
-      <button onClick={getCount}>Click Me for Increase!</button>
-      <button onClick={decreaseCount}>Click Me for Decrease!</button>
-      <p id="count">Count is: {count}</p>
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route exact path="/"
+          element={<>
+            <Home />
+          </>
+          }></Route>
+          <Route exact path="/NewEvent" element={<NewEvent />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
