@@ -1,0 +1,19 @@
+#mainContainer {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    background-color: lightgrey;
+    width: 80vw;
+    height: 60vh;
+    margin: 50px auto 50px auto;
+}
+#mainContainer header {
+    margin: 0px auto 0px auto;
+}
+.newEventContainer {
+    position: relative;
+    background-color: rgb(175, 175, 175);
+    width: 80vw;
+    height: 200px;
+    padding: 50px;
+}

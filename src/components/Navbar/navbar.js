@@ -7,10 +7,10 @@ function Naviation() {
     <>
       <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">ToDo List!</Navbar.Brand>
+          <Navbar.Brand href="/">ToDo List!</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Create New Event</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/NewEvent">Create New Event</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
