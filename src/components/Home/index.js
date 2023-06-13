@@ -1,26 +1,28 @@
 import React, {useState} from "react";
 import data from '../../data.json';
+import ToDo from "../ToDo.js";
+import ToDoList from "../ToDoList.js";
 import "./style.scss";
 
 function Home(){
-    const input = document.getElementById("inputField");
-    const [value, newValue] = useState("");
-
     const [toDoList, setToDoList] = useState(data);
-
-    function submitNewEvent(){
-        const value1 = input.value;
-        newValue(console.log(value1));
-    }
+    
+    const handleToggle = (id) => {
+        let mapped = toDoList.map(task => {
+          return task.id == id ? { ...task, complete: !task.complete } : { ...task};
+        });
+        setToDoList(mapped);
+      }
+   
     return (
         <div id="mainContainer">
             <header>
                 <h1 style={{padding: 20}}>ToDo List</h1>
                 <input type="text" id="inputField" placeholder="New Event Here..." />
-                <button onClick={submitNewEvent}>Add Event</button>
+                <button>Add Event</button>
             </header>
             <div className="newEventContainer">
-                This is where the new event would go: {value}
+                <ToDoList toDoList={toDoList}/>
             </div>
         </div>
     )
