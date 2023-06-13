@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar/navbar.js';
 import Home from './components/Home/index.js';
 import NewEvent from './components/NewEvent/index.js';
-import './main.scss';
+import './main.scss';<Home />
 
 function App() {
 
@@ -15,7 +15,6 @@ function App() {
             <Home />
           </>
           }></Route>
-          <Route exact path="/NewEvent" element={<NewEvent />}></Route>
       </Routes>
     </Router>
   );

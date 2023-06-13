@@ -1,12 +1,16 @@
 import React, {useState} from "react";
+import data from '../../data.json';
 import "./style.scss";
 
 function Home(){
     const input = document.getElementById("inputField");
     const [value, newValue] = useState("");
 
+    const [toDoList, setToDoList] = useState(data);
+
     function submitNewEvent(){
-        newValue(console.log(input.value));
+        const value1 = input.value;
+        newValue(console.log(value1));
     }
     return (
         <div id="mainContainer">
