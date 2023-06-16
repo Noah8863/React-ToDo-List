@@ -1,3 +1,7 @@
+@import "~bootstrap/scss/bootstrap";
+@mixin transition($property: all, $duration: 1.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+}
 .strike {
     text-decoration: line-through;
  }
@@ -9,9 +13,90 @@
     width: 80vw;
     height: auto;
     margin: auto;
+    text-align: center;
 }
-#mainContainer header {
-    margin: 0px auto 0px auto;
+
+#newEventBtn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    &.learn-more {
+      width: 11.5rem;
+      height: auto;
+      margin-bottom: 0px;
+      .circle {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 2rem;
+        height: 2rem;
+        background: blue;
+        border-radius: 1.625rem;
+        .icon {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          &.arrow {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            left: 0.25rem;
+            width: 1rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .button-text {
+        @include transition(all, .45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 1.2rem;
+        right: 0;
+        bottom: 1.5rem;
+        padding: 0.75rem 0;
+        margin: auto;
+        color: grey;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &:hover {
+      .circle {
+        width: 100%;
+        .icon {
+          &.arrow {
+          background: white;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+        .button-text {
+        color: white;
+        }
+    }
 }
 .newEventContainer {
     position: relative;

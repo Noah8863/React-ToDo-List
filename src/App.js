@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import data from "../src/data.json";
 //components
 import NavBar from "./components/Navbar/navbar.js";
-import ToDo from "../src/components/ToDo.js";
 import ToDoList from "../src/components/ToDoList.js";
 import ToDoForm from "../src/components/ToDoForm.js";
 //styles
@@ -15,7 +14,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = toDoList.map((task) => {
-      return task.id == id
+      return task.id === id
         ? { ...task, complete: !task.complete }
         : { ...task };
     });
@@ -40,7 +39,7 @@ function App() {
       <NavBar />
       <div id="mainContainer">
         <header>
-          <h1 style={{ padding: 20 }}>ToDo List</h1>
+          <h1 style={{margin: 20}}>ToDo List</h1>
           <ToDoForm addTask={addTask}/>
         </header>
         <div className="newEventContainer">
