@@ -14,7 +14,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = toDoList.map((task) => {
-      return task.id === id
+      return task.id === Number(id)
         ? { ...task, complete: !task.complete }
         : { ...task };
     });
@@ -41,10 +41,10 @@ function App() {
         <header>
           <h1 style={{margin: 20}}>ToDo List</h1>
           <ToDoForm addTask={addTask}/>
+          <div onClick={handleFilter} className="icon-delete"></div>
         </header>
         <div className="newEventContainer">
           <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
-          
         </div>
       </div>
     </>
