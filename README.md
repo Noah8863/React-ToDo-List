@@ -1,13 +1,8 @@
 # React ToDo List 
 
-
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
   This application is protected under Apache license
-
-  https://opensource.org/licenses/Apache-2.0 
-
-
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  
   ## Table of Contents
   [Description](#quick-description-about-the-project)
 
@@ -25,7 +20,6 @@
 
   [Questions](#questions)
 
-
   ## Quick Description about the project 
 
   This is a ToDo list built on React.js to help you sort daily events. The program allows you to add and delete events so youcan be productive all day! 
@@ -35,10 +29,18 @@
   To use this project, please 'git clone' the following repository link: 
 
   https://github.com/Noah8863/React-ToDo-List.git 
+  
+  ## Deployed URL 
+  
+  https://todo-list-build-with-react.netlify.app/ 
 
   ## How to use this project 
 
   Simply add you new events by the input field and mark off the ones you've completed. Once done, click on the "clear" button to remove them from the list.  
+  
+  ## GIF showcasing the project
+  
+  ![ToDo List](https://github.com/Noah8863/React-ToDo-List/assets/60634270/c423d723-7aa9-4e75-b524-abc1de0e64ed)
 
   ## Contributing to this project
   Fork the repo and submit a merge request. Merging will be approved upon review. 
